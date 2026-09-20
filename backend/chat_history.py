@@ -1,8 +1,7 @@
-from pathlib import Path
 import json
+from backend import config
 
-
-CHAT_DIR = Path(__file__).resolve().parent / "data" / "chats"
+CHAT_DIR = config.DATA_DIR / "chats"
 
 # 保存聊天记录
 def save_chat(messages, chat_id):

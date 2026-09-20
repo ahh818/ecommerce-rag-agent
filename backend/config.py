@@ -19,3 +19,8 @@ PERSIST_DIR = str(Path(__file__).resolve().parent/ "data" / "chroma_db")
 COLLECTION_NAME = os.getenv("COLLECTION_NAME")
 
 DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
+
+
+BACKEND_DIR = Path(__file__).resolve().parent   # backend 目录（数据都在这下面）
+DATA_DIR = BACKEND_DIR / "data"                 # 数据根目录 ★ 唯一事实来源
+PERSIST_DIR = str(DATA_DIR / "chroma_db")

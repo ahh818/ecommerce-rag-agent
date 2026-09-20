@@ -3,7 +3,7 @@ from backend.agent.agent import chat
 from datetime import datetime
 from backend.chat_history import get_chat_list, get_chat_title, load_chat,delete_chat
 from backend.rag.indexing import sync_knowledge_base
-from pathlib import Path
+from backend import config
 
 
 #大标题
@@ -77,7 +77,7 @@ with st.sidebar:
 
     st.subheader("📚 知识库")
 
-    data_path = Path("backend/data")
+    data_path = config.DATA_DIR
 
     txt_files = list(data_path.glob("*.txt"))
 

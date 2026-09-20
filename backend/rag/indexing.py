@@ -1,13 +1,12 @@
-from pathlib import Path
 import json
 import hashlib
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from backend.rag.store import vector_store
-
+from backend import config
 
 def sync_knowledge_base():
     """同步本地知识库"""
-    data_path = Path(__file__).resolve().parent.parent / "data"
+    data_path = config.DATA_DIR
     txt_files = list(data_path.glob("*.txt"))
 
 
