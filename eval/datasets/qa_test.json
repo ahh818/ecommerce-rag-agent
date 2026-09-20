@@ -140,7 +140,7 @@
 {
     "id": 24,
     "question": "家里灰尘比较明显，机器人选浅色还是深色比较好打理？",
-    "expected_source": "颜色选择.txt",
+    "expected_source": null,
     "category": "颜色选择"
 },
 {
