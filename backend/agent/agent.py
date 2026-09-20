@@ -1,7 +1,7 @@
 from backend.llm import llm
 from langchain.agents import create_agent
 import time
-from backend.chat_history import save_chat
+from backend.api.chat_history import save_chat
 from backend.agent.tools import rag_summarize, get_weather
 from backend.agent.prompts import system_prompt
 
