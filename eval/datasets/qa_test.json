@@ -39,7 +39,7 @@
         "id": 7,
         "question": "我皮肤偏黄，平时买衣服的时候颜色应该怎么选比较合适？",
         "expected_source": "颜色选择.txt",
-        "category": "颜色"
+        "category": "颜色选择"
     },
     {
         "id": 8,
@@ -58,5 +58,126 @@
         "question": "我这个机器人还有多久过保？如果坏了应该怎么申请退货？",
         "expected_source": null,
         "category": "知识库外"
-    }
+    },
+    {
+    "id": 11,
+    "question": "扫地机器人每天都用的话，尘盒是不是每次清扫完都要倒？",
+    "expected_source": "机器人保养知识.txt",
+    "category": "保养"
+},
+{
+    "id": 12,
+    "question": "我看滤网里面已经有不少灰了，这个需要多久清理或者更换一次？",
+    "expected_source": "机器人保养知识.txt",
+    "category": "保养"
+},
+{
+    "id": 13,
+    "question": "主刷上面缠了很多头发，我直接用手拽下来就行吗？平时应该怎么清理？",
+    "expected_source": "机器人保养知识.txt",
+    "category": "保养"
+},
+{
+    "id": 14,
+    "question": "拖完地以后拖布湿漉漉的，应该怎么处理才能避免发霉或者有异味？",
+    "expected_source": "机器人保养知识.txt",
+    "category": "保养"
+},
+{
+    "id": 15,
+    "question": "扫地机器人很长时间不用的话，应该怎么放？需要把里面的水倒掉吗？",
+    "expected_source": null,
+    "category": "机器人保养知识"
+},
+{
+    "id": 16,
+    "question": "衣服洗完以后如果暂时不穿，怎么晾和收起来比较合适？",
+    "expected_source": "洗涤养护.txt",
+    "category": "洗涤养护"
+},
+{
+    "id": 17,
+    "question": "机器人吸力感觉明显变小了，尘盒也清空了，这是哪里可能堵住了吗？",
+    "expected_source": "故障.txt",
+    "category": "故障"
+},
+{
+    "id": 18,
+    "question": "我的扫地机器人一开机主刷就不怎么转，而且还一直发出异响，应该检查什么？",
+    "expected_source": "故障.txt",
+    "category": "故障"
+},
+{
+    "id": 19,
+    "question": "最近机器人扫完以后地上还是有很多垃圾，是不是边刷或者主刷出问题了？",
+    "expected_source": "故障.txt",
+    "category": "故障"
+},
+{
+    "id": 20,
+    "question": "我身高168cm，体重55kg，平时穿衣服一般应该选什么尺码？",
+    "expected_source": null,
+    "category": "尺码推荐"
+},
+{
+    "id": 21,
+    "question": "我身高173cm，体重140斤，XL和2XL之间不知道怎么选，能帮我查一下吗？",
+    "expected_source": "尺码推荐.txt",
+    "category": "尺码推荐"
+},
+{
+    "id": 22,
+    "question": "我身高182cm，体重80kg，想穿得宽松一点，应该看哪个尺码？",
+    "expected_source": null,
+    "category": "尺码推荐"
+},
+{
+    "id": 23,
+    "question": "我家里装修主要是白色和原木色，扫地机器人选什么颜色比较搭？",
+    "expected_source": null,
+    "category": "颜色选择"
+},
+{
+    "id": 24,
+    "question": "家里灰尘比较明显，机器人选浅色还是深色比较好打理？",
+    "expected_source": "颜色选择.txt",
+    "category": "颜色选择"
+},
+{
+    "id": 25,
+    "question": "Python里的 try 和 except 是干什么的？为什么程序出错的时候经常要用它们？",
+    "expected_source": "python基础语法.txt",
+    "category": "Python基础"
+},
+{
+    "id": 26,
+    "question": "Python里面的列表 list 和字典 dict 有什么区别？平时应该怎么选择？",
+    "expected_source": "python基础语法.txt",
+    "category": "Python基础"
+},
+{
+    "id": 27,
+    "question": "扫地机器人清扫的时候总是卡在桌子下面出不来，这种情况应该怎么处理？",
+    "expected_source": "故障.txt",
+    "category": "故障"
+},
+{
+    "id": 28,
+    "question": "机器人明明已经开始充电了，但是过了很长时间电量还是没怎么增加，是什么原因？",
+    "expected_source": "故障.txt",
+    "category": "故障"
+},
+{
+    "id": 29,
+    "question": "我想知道这个扫地机器人官方售后电话是多少，坏了以后应该找哪家维修店？",
+    "expected_source": null,
+    "category": "知识库外"
+},
+{
+    "id": 30,
+    "question": "这个扫地机器人现在网上卖多少钱？哪个平台买最便宜？",
+    "expected_source": null,
+    "category": "知识库外"
+}
+
 ]
