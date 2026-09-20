@@ -2,7 +2,7 @@ from pathlib import Path
 import json
 
 
-CHAT_DIR = Path(__file__).parent / "data" / "chats"
+CHAT_DIR = Path(__file__).resolve().parent / "data" / "chats"
 
 # 保存聊天记录
 def save_chat(messages, chat_id):

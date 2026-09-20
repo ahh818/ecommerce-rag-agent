@@ -1,8 +1,8 @@
 import streamlit as st
-from backend.agent import chat
+from backend.agent.agent import chat
 from datetime import datetime
 from backend.chat_history import get_chat_list, get_chat_title, load_chat,delete_chat
-from backend.knowledge_base import sync_knowledge_base
+from backend.rag.indexing import sync_knowledge_base
 from pathlib import Path
 
 

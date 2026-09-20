@@ -7,7 +7,7 @@ from backend.rag.store import vector_store
 
 def sync_knowledge_base():
     """同步本地知识库"""
-    data_path = Path(__file__).parent/"data"
+    data_path = Path(__file__).resolve().parent.parent / "data"
     txt_files = list(data_path.glob("*.txt"))
 
 

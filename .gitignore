@@ -7,4 +7,4 @@ __pycache__/
 # 数据与向量库（可由知识库文件重新生成）
 backend/data/chroma_db/
 backend/data/chats/
-data/
+/data/
