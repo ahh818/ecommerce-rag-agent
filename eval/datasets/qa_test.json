@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "question": "我刚用完扫地机器人，尘盒里面已经挺满了，一般多久清理一次比较合适？",
+        "expected_source": "机器人保养知识.txt",
+        "category": "保养"
+    },
+    {
+        "id": 2,
+        "question": "我发现机器人最近吸灰越来越差，但是尘盒也没完全满，应该先检查哪里？",
+        "expected_source": "故障.txt",
+        "category": "故障"
+    },
+    {
+        "id": 3,
+        "question": "主刷上缠了好多头发，现在转起来声音也有点大，这种情况怎么处理？",
+        "expected_source": "故障.txt",
+        "category": "故障"
+    },
+    {
+        "id": 4,
+        "question": "我洗完衣服之后不方便马上收起来，衣服应该怎么晾、怎么放才不容易出问题？",
+        "expected_source": "洗涤养护.txt",
+        "category": "洗涤养护"
+    },
+    {
+        "id": 5,
+        "question": "我身高175cm，体重70kg，平时穿衣服应该选多大码？",
+        "expected_source": "尺码推荐.txt",
+        "category": "尺码"
+    },
+    {
+        "id": 6,
+        "question": "我身高180cm，体重160斤，2XL 和 3XL 都有点纠结，你觉得应该查哪个尺码？",
+        "expected_source": "尺码推荐.txt",
+        "category": "尺码"
+    },
+    {
+        "id": 7,
+        "question": "我皮肤偏黄，平时买衣服的时候颜色应该怎么选比较合适？",
+        "expected_source": "颜色选择.txt",
+        "category": "颜色"
+    },
+    {
+        "id": 8,
+        "question": "Python 里面的 self 到底是干什么的？为什么类的方法里面经常能看到它？",
+        "expected_source": "python基础语法.txt",
+        "category": "Python"
+    },
+    {
+        "id": 9,
+        "question": "我这个扫地机器人用了没多久就开始清扫不干净了，地上总会剩一些灰尘和碎屑，可能是什么原因？",
+        "expected_source": "故障.txt",
+        "category": "故障"
+    },
+    {
+        "id": 10,
+        "question": "我这个机器人还有多久过保？如果坏了应该怎么申请退货？",
+        "expected_source": null,
+        "category": "知识库外"
+    }
+]
