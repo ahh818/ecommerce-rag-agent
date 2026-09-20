@@ -1,4 +1,4 @@
-from backend.model import llm
+from backend.llm import llm
 from langchain.tools import tool
 from backend.rag import RagService
 from langchain.agents import create_agent

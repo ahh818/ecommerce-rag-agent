@@ -1,6 +1,6 @@
 from pathlib import Path
 import json
-from datetime import datetime
+
 
 CHAT_DIR = Path(__file__).parent / "data" / "chats"
 

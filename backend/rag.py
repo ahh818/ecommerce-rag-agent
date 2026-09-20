@@ -1,4 +1,4 @@
-from backend.model import llm
+from backend.llm import llm
 from langchain_core.prompts import ChatPromptTemplate
 from backend.knowledge_base import sync_knowledge_base, vector_store
 
