@@ -1,24 +1,8 @@
 from pathlib import Path
-import hashlib
 import json
-from langchain_chroma import Chroma
-from langchain_community.embeddings import DashScopeEmbeddings
+import hashlib
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from backend import config
-
-
-
-embed_model = DashScopeEmbeddings(
-    model="text-embedding-v4",
-    dashscope_api_key=config.DASHSCOPE_API_KEY
-)
-
-
-vector_store = Chroma(
-    collection_name=config.COLLECTION_NAME,
-    embedding_function=embed_model,
-    persist_directory=config.PERSIST_DIR
-)
+from backend.rag.store import vector_store
 
 
 def sync_knowledge_base():
@@ -119,4 +103,3 @@ def sync_knowledge_base():
         json.dumps(file_records, ensure_ascii=False, indent=4),
         encoding="utf-8"
     )
-

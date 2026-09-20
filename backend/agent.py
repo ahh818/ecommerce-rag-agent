@@ -1,6 +1,6 @@
 from backend.llm import llm
 from langchain.tools import tool
-from backend.rag import RagService
+from backend.rag.pipeline import RagService
 from langchain.agents import create_agent
 import time
 from backend.chat_history import save_chat

@@ -1,6 +1,8 @@
-from backend.llm import llm
 from langchain_core.prompts import ChatPromptTemplate
-from backend.knowledge_base import sync_knowledge_base, vector_store
+from backend.rag.indexing import sync_knowledge_base
+from backend.rag.store import vector_store
+from backend.llm import llm
+
 
 class RagService :
     def __init__(self):
@@ -42,16 +44,3 @@ class RagService :
 
         # 5. 返回答案文本
         return answer.content
-
-# if __name__ == "__main__":
-#     """
-#     测试RAG服务
-#     """
-#     rag_service = RagService()
-#
-#     query = "扫地机器人清扫完还有灰怎么办？"
-#
-#     answer = rag_service.rag_summarize(query)
-#
-#     print("========== 最终答案 ==========")
-#     print(answer)
