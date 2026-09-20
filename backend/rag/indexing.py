@@ -52,6 +52,8 @@ def sync_knowledge_base():
 
         old_md5 = file_records.get(file_path.name)
 
+        # file_records 可能滞后于向量库实际状态（同步中断、库被重建）
+        # 只比对 MD5 会把缺失文件永久跳过，必须同时确认库里真有这个来源
         if old_md5 == file_md5 and file_path.name in existing_sources:
             print(file_path.name, "没有变化，跳过")
             continue
