@@ -16,7 +16,6 @@ class RagService :
             search_kwargs={"k": 4}
         )
         self.prompt_template = ChatPromptTemplate.from_template("""
-请根据下面的参考资料回答用户问题。
 参考资料：
 {context}
 用户问题：
@@ -25,6 +24,7 @@ class RagService :
 - 如果包含：基于参考资料回答，不要编造。
 - 如果不包含：明确告诉用户"知识库中没有相关内容"，
   不要尝试用你自己的知识回答。
+  判断过程不要出现在回答里，只输出最终回答。
 """)
 
     def rag_summarize(self,query:str) ->str:

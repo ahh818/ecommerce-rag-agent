@@ -116,7 +116,7 @@
 {
     "id": 20,
     "question": "我身高168cm，体重55kg，平时穿衣服一般应该选什么尺码？",
-    "expected_source": null,
+    "expected_source": "尺码推荐.txt",
     "category": "尺码推荐"
 },
 {
@@ -128,7 +128,7 @@
 {
     "id": 22,
     "question": "我身高182cm，体重80kg，想穿得宽松一点，应该看哪个尺码？",
-    "expected_source": null,
+    "expected_source": "尺码推荐.txt",
     "category": "尺码推荐"
 },
 {
