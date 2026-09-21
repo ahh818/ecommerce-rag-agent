@@ -8,7 +8,7 @@ from backend import config
 
 #大标题
 st.set_page_config(
-    page_title="智能助手",
+    page_title="电商智能客服问答助手",
     page_icon="🤖"
 )
 
@@ -122,7 +122,7 @@ st.write("💡 你可以这样问：")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    question1 = st.button("扫地机器人怎么保养？")
+    question1 = st.button("洗衣服有什么注意事项？")
 
 with col2:
     question2 = st.button("为什么清扫后还有灰尘？")
@@ -134,7 +134,7 @@ with col3:
 prompt = st.chat_input("请输入你的问题")
 
 if question1:
-    prompt = "扫地机器人怎么保养？"
+    prompt = "洗衣服有什么注意事项？"
 
 if question2:
     prompt = "为什么清扫后还有灰尘？"

@@ -44,7 +44,7 @@
     {
         "id": 8,
         "question": "Python 里面的 self 到底是干什么的？为什么类的方法里面经常能看到它？",
-        "expected_source": "python基础语法.txt",
+        "expected_source": null,
         "category": "Python"
     },
     {
@@ -146,13 +146,13 @@
 {
     "id": 25,
     "question": "Python里的 try 和 except 是干什么的？为什么程序出错的时候经常要用它们？",
-    "expected_source": "python基础语法.txt",
+    "expected_source": null,
     "category": "Python基础"
 },
 {
     "id": 26,
     "question": "Python里面的列表 list 和字典 dict 有什么区别？平时应该怎么选择？",
-    "expected_source": "python基础语法.txt",
+    "expected_source": null,
     "category": "Python基础"
 },
 {
