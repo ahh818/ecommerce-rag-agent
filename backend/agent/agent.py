@@ -2,7 +2,7 @@ from backend.llm import llm
 from langchain.agents import create_agent
 import time
 from backend.api.chat_history import save_chat
-from backend.agent.tools import rag_summarize, get_weather
+from backend.agent.tools import rag_summarize
 from backend.agent.prompts import system_prompt
 
 
@@ -10,7 +10,7 @@ from backend.agent.prompts import system_prompt
 
 agent = create_agent(
     model=llm,
-    tools=[rag_summarize, get_weather],
+    tools=[rag_summarize],
     system_prompt=system_prompt
 )
 
