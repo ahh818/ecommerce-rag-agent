@@ -22,9 +22,72 @@
 ## 环境要求
 
 - Python 3.13+
-- 需要三个 API Key：
-  - DeepSeek（大模型）
-  - DashScope（向量嵌入，阿里云百炼）
-  - Tavily（联网搜索工具，可选）
+- [uv](https://docs.astral.sh/uv/)（依赖管理）
+- API Key（缺一不可）：
+
+| 变量 | 用途 | 申请地址 |
+|---|---|---|
+| `DEEPSEEK_API_KEY` | 大模型对话 | DeepSeek 开放平台 |
+| `DASHSCOPE_API_KEY` | 文本向量嵌入 | 阿里云百炼控制台 |
+
+> `TAVILY_API_KEY` 为预留配置（联网搜索功能规划中，当前未接入）。
+
+## 快速开始
+
+### 安装
+
+```bash
+git clone <仓库地址>
+cd 电商智能客服问答系统
+uv sync
+```
+
+### 配置
+
+复制环境变量模板并填入自己的 Key：
+
+```bash
+copy .env.example .env
+```
+
+### 启动
+
+```bash
+.venv\Scripts\streamlit.exe run app.py
+```
+
+浏览器访问 `http://localhost:8501`。
+
+启动时会自动同步知识库：首次运行需调用嵌入接口重新生成向量
+（约 1-2 分钟），控制台会打印每个文件的同步状态。
+
+### 运行评测
+
+```bash
+.venv\Scripts\python.exe eval\run_eval.py
+```
+
+输出每题命中情况、分类统计与总体检索命中率。
+
+### 常见问题
+
+**启动时报 `uv trampoline failed to canonicalize script path`**
+
+项目目录被移动或重命名，导致虚拟环境中启动器记录的绝对路径失效。
+重建环境即可：
+
+```bash
+uv sync
+```
+
+**中文显示乱码**
+
+Windows CMD 默认使用 GBK 编码。知识库文本文件必须保存为 UTF-8；
+在 CMD 中查看中文输出前可先执行 `chcp 65001`。
+
+**启动时提示缺少 API Key**
+
+确认 `.env` 文件位于项目根目录（与 `app.py` 同级），且已填入
+`DEEPSEEK_API_KEY` 与 `DASHSCOPE_API_KEY`。
 
 
