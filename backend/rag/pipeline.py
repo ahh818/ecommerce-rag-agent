@@ -33,14 +33,25 @@ class RagService :
         :param query:
         :return:
         """
-        # 1. 根据问题检索相关文档
+        # 1. 检索
         results = self.retriever.invoke(query)
-        # 2. 把检索到的文档拼接成一个字符串
-        context = "\n".join([result.page_content for result in results])
-        # 3. 把context和query拼接成一个字符串
-        prompt = self.prompt_template.format_prompt(context=context, query=query)
-        # 4. 调用大模型
-        answer = llm.invoke(prompt)
 
-        # 5. 返回答案文本
-        return answer.content
+        # 2. 收集来源文件（去重，保持顺序）
+        sources = list(dict.fromkeys(
+            r.metadata.get("source")
+            for r in results
+            if r.metadata.get("source")
+        ))
+
+        # 3. 拼 context（原有逻辑）
+        context = "\n".join([r.page_content for r in results])
+
+        # 4. 调模型（原有逻辑）
+        prompt = self.prompt_template.format_prompt(context=context, query=query)
+        answer = llm.invoke(prompt).content
+
+        # 5. 附上来源引用
+        if sources:
+            answer += "\n\n📚 来源：" + "、".join(sources)
+
+        return answer
