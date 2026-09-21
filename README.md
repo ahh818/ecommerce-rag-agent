@@ -99,8 +99,8 @@
 ### 安装
 
 ```bash
-git clone <仓库地址>
-cd 电商智能客服问答系统
+git clone https://github.com/ahh818/ecommerce-rag-agent.git
+cd ecommerce-rag-agent
 uv sync
 ```
 
