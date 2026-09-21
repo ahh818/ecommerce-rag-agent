@@ -152,6 +152,40 @@ Windows CMD 默认使用 GBK 编码。知识库文本文件必须保存为 UTF-8
 确认 `.env` 文件位于项目根目录（与 `app.py` 同级），且已填入
 `DEEPSEEK_API_KEY` 与 `DASHSCOPE_API_KEY`。
 
+## 项目结构
+
+```
+电商智能客服问答系统/
+├── app.py                    # 入口：启动应用
+├── eval/                     # 评测体系
+│   ├── run_eval.py           #   检索命中率评测脚本
+│   └── datasets/qa_test.json #   30 题测试集
+├── docs/
+│   ├── incidents.md          #   故障排查记录
+│   └── test_kb/              #   测试用示例文件（未纳入知识库）
+├── backend/
+│   ├── config.py             #   配置与路径（单一事实来源）
+│   ├── llm.py                #   大模型封装
+│   ├── agent/                #   Agent 层
+│   │   ├── agent.py          #     组装与流式输出
+│   │   ├── tools.py          #     工具定义
+│   │   └── prompts.py        #     提示词
+│   ├── rag/                  #   RAG 层
+│   │   ├── store.py          #     向量库实例
+│   │   ├── indexing.py       #     知识库同步
+│   │   └── pipeline.py       #     检索与生成
+│   ├── api/
+│   │   └── chat_history.py   #   对话历史持久化
+│   └── data/                 #   知识库（8 个商品知识文件）
+│       └── chroma_db/        #     向量库（首次启动自动生成）
+├── .env.example              # 环境变量模板
+└── README.md
+```
+
+## 踩坑记录
+
+开发过程中遇到并解决的三个真实问题（同步死锁、向量索引损坏、
+.gitignore 误伤），完整排查过程见 [docs/incidents.md](docs/incidents.md)。
 
 
 
