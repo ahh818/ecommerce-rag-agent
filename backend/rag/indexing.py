@@ -104,3 +104,8 @@ def sync_knowledge_base():
         json.dumps(file_records, ensure_ascii=False, indent=4),
         encoding="utf-8"
     )
+
+if __name__ == '__main__':
+    print('开始同步知识库...')
+    sync_knowledge_base()
+    print('同步完成')
