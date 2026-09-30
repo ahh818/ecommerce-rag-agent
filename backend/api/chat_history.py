@@ -7,6 +7,8 @@ CHAT_DIR = config.DATA_DIR / "chats"
 def save_chat(messages, chat_id):
     chat_path = CHAT_DIR / f"{chat_id}.json"
 
+    chat_path.parent.mkdir(parents=True, exist_ok=True)
+
     chat_path.write_text(
         json.dumps(messages, ensure_ascii=False, indent=4),
         encoding="utf-8"
