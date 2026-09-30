@@ -4,8 +4,15 @@ __pycache__/
 *.pyc
 .idea/
 
-# 数据与向量库（可由知识库文件重新生成）
-backend/data/chroma_db/
-backend/data/chroma_db_*/
+# 聊天记录（含真实对话，不进仓库）
 backend/data/chats/
-/data/
+
+# 旧版本向量库备份（历史遗留，不参与部署）
+backend/data/chroma_db_old50/
+
+# 运行时产物
+md5.txt
+logs/
+
+# AI 工具的本地文件
+.claude/worktrees/
